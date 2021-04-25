@@ -5,6 +5,7 @@ enum PState
 	run,
 	attack,
 	jump,
+	fall,
 	dead
 }
 
@@ -23,9 +24,11 @@ CanBeHit = true;
 KnockbackDir = 0;
 Knockingback = false;
 LastYOnGround = -1;
+Jumped = false;
 /* I should be able to remove this but it doesn't work and I dont know and I don't wanna know why */
 isAttacking = false;
 AlreadyAttacked = false;
+/* Ladder Collision */ 
 isOnLadder = false;
 
 /* Quick hack for jumping animation code */

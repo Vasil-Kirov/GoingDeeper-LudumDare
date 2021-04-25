@@ -1,8 +1,8 @@
-if(CanBeHit && !other.PlayerCreated)
+if(CanBeHit && !other.PlayerCreated && instance_exists(other.Creator))
 {
-	KnockbackDir = point_direction(x, y, other.x, other.y);
+	KnockbackDir = point_direction(x, y, other.Creator.x, other.Creator.y);
 	Knockingback = true;
-	alarm[2] = room_speed * .75;
+	alarm[2] = room_speed * .5;
 	hit = true;
 	CanBeHit = false;
 	if(alarm[1] <= 0)

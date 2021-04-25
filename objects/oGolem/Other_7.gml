@@ -4,5 +4,6 @@ if(State = GState.dead)
 	{
 		sprite_index = sGolemHeavyBreath;
 		image_index = 0;
+		alarm[5] = 5 * room_speed;
 	}
 }

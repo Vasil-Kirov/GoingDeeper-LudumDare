@@ -10,7 +10,13 @@ switch(State)
 	{
 		if(!isOnGround)
 		{
-			image_speed = -1;
+			State = PState.fall;
+			if(sprite_index != sPlayerFall)
+			{
+				sprite_index = sPlayerFall;
+				image_index = 0;
+				image_speed = 1;
+			}
 			ReachedJumpAnimEnd = true; 
 		}
 	}break;
@@ -27,6 +33,8 @@ switch(State)
 	}break;
 	case PState.dead:
 	{
-		EndGame();
+		image_speed = 0;
+		image_index = image_number - 1;
+		alarm[3] = room_speed * 5;
 	}break;
 }
