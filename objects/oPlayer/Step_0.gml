@@ -12,18 +12,44 @@ if(hp <= 0)
 }
 else
 {
+	/* Fail safe if something happens */ 
 	if(isAttacking && alarm[4] <= 0)
 	{
 		alarm[4] = 1.5 * room_speed;
 	}
+	if(isDashing)
+	{
+		vspd = 0;
+		hspd = 7 * facing;
+	}
 	if(Knockingback)
 	{
-		if(sprite_index != sPlayerHurt)
+		if(!isOnGround)
 		{
-			sprite_index = sPlayerHurt;
-			image_index = 0;
+			Knockingback = false;
 		}
-		x -= lengthdir_x(1, KnockbackDir);
+		else
+		{
+			if(sprite_index != sPlayerHurt)
+			{
+				sprite_index = sPlayerHurt;
+				image_index = 0;
+			}
+			hspd = -lengthdir_x(1, KnockbackDir);
+		}
+	}
+	else
+	{
+		if(keyboard_check(vk_shift) && CanDash)
+		{
+			State = PState.run;
+			sprite_index = sPlayerRun;
+			image_speed  = 0;
+			image_index  = 0;
+			isDashing = true;
+			CanDash = false;
+			alarm[5] = .25 * room_speed;
+		}
 	}
 	if(State != PState.jump) image_speed = 1;
 
@@ -40,8 +66,13 @@ else
 	var right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 
 	/* Check if character is on the ground */ 
-	if(!Knockingback)
+	if(!Knockingback && !isDashing)
 	{
+		if(sprite_index == sPlayerHurt)
+		{
+			sprite_index = sPlayer;
+			image_index  = 0;
+		}
 		isOnLadder = place_meeting(x, y, oLadder);
 		if(State != PState.attack)
 		{
@@ -189,9 +220,10 @@ else
 				if(image_index >= 3 && image_index <= 5 && !AlreadyAttacked)
 				{
 					AlreadyAttacked = true;
+					audio_play_sound(sndSwordAttack, 0, false);
 					PlayerAttack();
 				}
-				if(image_index > 4)
+				if(image_index > 5)
 				{
 					AlreadyAttacked = false;
 				}

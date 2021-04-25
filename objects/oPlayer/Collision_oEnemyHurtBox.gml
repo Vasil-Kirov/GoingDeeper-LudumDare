@@ -1,4 +1,4 @@
-if(CanBeHit && !other.PlayerCreated && instance_exists(other.Creator))
+if(CanBeHit && !other.PlayerCreated && instance_exists(other.Creator) && !isDashing)
 {
 	KnockbackDir = point_direction(x, y, other.Creator.x, other.Creator.y);
 	Knockingback = true;

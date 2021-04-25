@@ -1,4 +1,4 @@
-if(CanBeHit && other.hp > 0)
+if(CanBeHit && other.hp > 0 && !isDashing)
 {
 	KnockbackDir = point_direction(x, y, other.x, other.y);
 	Knockingback = true;

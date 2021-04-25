@@ -1,1 +1,2 @@
 isAttacking = false;
+AlreadyAttacked = false;

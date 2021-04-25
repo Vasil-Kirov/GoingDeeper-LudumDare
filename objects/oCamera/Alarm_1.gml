@@ -1,0 +1,1 @@
+CanSwitchPause = true;

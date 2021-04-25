@@ -1,0 +1,2 @@
+isPlayButton = false;
+isSoundTestButton = false;

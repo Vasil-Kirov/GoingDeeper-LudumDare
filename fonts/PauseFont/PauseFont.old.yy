@@ -131,7 +131,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "MainFont",
+  "name": "PauseFont",
   "tags": [],
   "resourceType": "GMFont",
 }

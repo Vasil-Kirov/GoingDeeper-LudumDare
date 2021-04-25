@@ -9,6 +9,9 @@ enum PState
 	dead
 }
 
+
+CanDash = true;
+isDashing = false;
 hit = false;
 spd = 3;
 global.grav = 0.5;
