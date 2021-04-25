@@ -24,7 +24,7 @@ else
 
 
 
-	image_xscale = facing;
+	image_xscale = -facing;
 	if(hit && alarm[0] <= 0)
 	{
 		alarm[0] = 0.8 * room_speed;
@@ -71,7 +71,7 @@ else
 				}
 				hspd = 0;
 				if(alarm[2] <= 0) alarm[2] = 10 * room_speed;
-				if(distance_to_object(oPlayer) < 256 && (y - oPlayer.y >= -15 &&  y - oPlayer.y <= 15)) 
+				if(distance_to_object(oPlayer) < 256) 
 				{
 					State = GState.chase;
 					spd = 3;
@@ -130,7 +130,6 @@ else
 			vspd = 0;
 		}
 		y += vspd;
-		if(distance_to_object(oPlayer) < 20 && isOnGround) hspd = 0;
 		x += hspd;
 	}
 }

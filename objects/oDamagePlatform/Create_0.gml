@@ -1,0 +1,2 @@
+CanDamageGolem = true;
+CanDamagePlayer = true;

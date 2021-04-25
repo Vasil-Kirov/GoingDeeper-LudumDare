@@ -6,7 +6,14 @@ enum GState
 	dead
 }
 
+hspd = 0;
+vspd = 0;
 CanAttack = true;
 isOnGround = false;
 State = GState.idle;
-hp = 200;
+hp = 30;
+facing = 1;
+hit = false;
+inAirSwitch = false;
+jmp = false;
+CanBeHit = true

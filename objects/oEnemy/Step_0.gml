@@ -103,7 +103,7 @@ else
 					if(distance_to_object(oPlayer) < 128 && (y - oPlayer.y >= -15 &&  y - oPlayer.y <= 15)) 
 					{
 						State = EState.chase;
-						spd = 1
+						spd = 1;
 					}
 				}break;
 				case EState.chase:
