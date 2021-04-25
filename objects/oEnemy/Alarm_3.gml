@@ -1,0 +1,1 @@
+CanAttack = true;
