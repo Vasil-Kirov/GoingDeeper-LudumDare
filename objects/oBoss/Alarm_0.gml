@@ -1,1 +1,1 @@
-toSwitch = random(3);
+toSwitch = round(random(3));
