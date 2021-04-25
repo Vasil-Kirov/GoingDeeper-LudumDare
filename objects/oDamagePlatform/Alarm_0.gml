@@ -1,0 +1,1 @@
+CanDamagePlayer = true;

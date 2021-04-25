@@ -1,5 +1,6 @@
 if(hp <= 0)
 {
+	hit = false;
 	if(State != GState.dead)
 	{
 		State = GState.dead;

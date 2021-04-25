@@ -1,4 +1,4 @@
-if(CanBeHit)
+if(CanBeHit && other.hp > 0)
 {
 	KnockbackDir = point_direction(x, y, other.x, other.y);
 	Knockingback = true;
