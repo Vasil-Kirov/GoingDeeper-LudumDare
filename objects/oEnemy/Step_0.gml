@@ -123,7 +123,10 @@ else
 						isAttacking = true;
 					}
 		
-					facing = sign(oPlayer.x - x);
+					if(sign(oPlayer.x - x) != 0)
+					{
+						facing = sign(oPlayer.x - x);
+					}
 					hspd = spd * facing;
 					if(distance_to_object(oPlayer) > 160)
 					{

@@ -37,6 +37,7 @@
     {"id":{"name":"oEnemyTrigger","path":"objects/oEnemyTrigger/oEnemyTrigger.yy",},"order":1,},
     {"id":{"name":"sndSwordAttack","path":"sounds/sndSwordAttack/sndSwordAttack.yy",},"order":1,},
     {"id":{"name":"sEnemyIdle","path":"sprites/sEnemyIdle/sEnemyIdle.yy",},"order":0,},
+    {"id":{"name":"sEmptyButton","path":"sprites/sEmptyButton/sEmptyButton.yy",},"order":3,},
     {"id":{"name":"sGolemIdle","path":"sprites/sGolemIdle/sGolemIdle.yy",},"order":0,},
     {"id":{"name":"sLadder","path":"sprites/sLadder/sLadder.yy",},"order":10,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},

@@ -117,6 +117,7 @@ else
 					var FallDamage = (y - LastYOnGround) / 15;
 					if(FallDamage > 10)
 					{
+						hit = true;
 						hp -= round(FallDamage);
 					}
 				}
