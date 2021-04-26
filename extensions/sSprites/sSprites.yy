@@ -18,6 +18,7 @@
   "files": [
     {"filename":"1439053374_Mine_Tileset.gmez","origname":"","init":"","final":"","kind":4,"uncompress":true,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"1445648107_Icon_Pack.gmez","origname":"","init":"","final":"","kind":4,"uncompress":true,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"8b94b91389e75c8530cf8a3a823f6c48.zip","origname":"","init":"","final":"","kind":4,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
   ],
   "classname": "",
   "tvosclassname": null,

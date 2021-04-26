@@ -120,6 +120,12 @@ else
 					if(MovingOutOfWall)
 					{
 						// Stop moving out of the wall
+						if(sprite_index != sBossSkill)
+						{
+							inPosition = true;
+							sprite_index = sBossSkill;
+							image_index = 0;
+						}
 						speed = 0;
 					}
 					if(distance_to_point(GoingToX, GoingToY) < 20 && !inPosition)

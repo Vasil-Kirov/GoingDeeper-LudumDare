@@ -8,6 +8,7 @@
     {"id":{"name":"sSprites","path":"extensions/sSprites/sSprites.yy",},"order":0,},
     {"id":{"name":"sPlayerHurt","path":"sprites/sPlayerHurt/sPlayerHurt.yy",},"order":6,},
     {"id":{"name":"sEnemyAttack","path":"sprites/sEnemyAttack/sEnemyAttack.yy",},"order":2,},
+    {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},"order":0,},
     {"id":{"name":"oLadder","path":"objects/oLadder/oLadder.yy",},"order":12,},
     {"id":{"name":"sEnemyDead","path":"sprites/sEnemyDead/sEnemyDead.yy",},"order":3,},
     {"id":{"name":"sBossSkill","path":"sprites/sBossSkill/sBossSkill.yy",},"order":2,},
@@ -35,6 +36,7 @@
     {"id":{"name":"sSoundTestButton","path":"sprites/sSoundTestButton/sSoundTestButton.yy",},"order":0,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":2,},
     {"id":{"name":"oEnemyTrigger","path":"objects/oEnemyTrigger/oEnemyTrigger.yy",},"order":1,},
+    {"id":{"name":"libborderless","path":"extensions/libborderless/libborderless.yy",},"order":1,},
     {"id":{"name":"sndSwordAttack","path":"sounds/sndSwordAttack/sndSwordAttack.yy",},"order":1,},
     {"id":{"name":"sEnemyIdle","path":"sprites/sEnemyIdle/sEnemyIdle.yy",},"order":0,},
     {"id":{"name":"sEmptyButton","path":"sprites/sEmptyButton/sEmptyButton.yy",},"order":3,},
@@ -117,6 +119,7 @@
     {"folderPath":"folders/Sprites/Buttons.yy","order":14,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/UI.yy","order":16,"resourceVersion":"1.0","name":"UI","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Boss.yy","order":15,"resourceVersion":"1.0","name":"Boss","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/borderless.yy","order":21,"resourceVersion":"1.0","name":"borderless","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
