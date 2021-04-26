@@ -1,0 +1,10 @@
+if(hit)
+{
+	shader_set(FlashOnHit);
+	draw_self();
+	shader_reset();
+}
+else
+{
+	draw_self();
+}

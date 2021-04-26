@@ -2,18 +2,30 @@ randomize(); // Have a different seed every time for differeent ressults from ra
 enum BossState
 {
 	hover,
+	attack,
 	skill,
-	attack
+	dead
 }
+
+LastAttack = BossState.hover;
+TimesRepeated = 0;
+CanBeHit = true;
+hit = false;
 State = BossState.hover;
 facing = 1;
-toSwitch = BossState.attack;
+toSwitch = -1;
 Damage = 20;
 hp = 60;
-
-/* Variables for attack state */ 
 GoingToX = 0;
 GoingToY = 0;
+
+/* Variables for skill state */ 
+AlreadyStarted = false;
+Finish = false;
+CreateBullet = true;
+
+/* Variables for attack state */ 
+
 AttackedFirst = false;
 AttackedSecond = false;
 AttackingPlayer = false;

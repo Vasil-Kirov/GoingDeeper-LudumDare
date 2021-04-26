@@ -11,3 +11,7 @@ if(sprite_index == sBossAttack)
 	sprite_index = sBossIdle;
 	image_index = 0;
 }
+if(sprite_index == sBossDeath)
+{
+	instance_destroy();
+}
