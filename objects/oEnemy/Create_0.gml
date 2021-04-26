@@ -5,6 +5,7 @@ enum EState
 	returning,
 	dead
 }
+TriggerCooldown = false;
 jmp = false;
 StartX = x;
 State = EState.idle;

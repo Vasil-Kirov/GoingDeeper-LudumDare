@@ -48,7 +48,7 @@ else
 			if(jmp)
 			{
 				isOnGround = false;
-				vspd = -7;
+				vspd = -14;
 				jmp = false;
 				inAirSwitch = true;
 
@@ -71,7 +71,7 @@ else
 					image_index = 0;
 				}
 				hspd = 0;
-				if(alarm[2] <= 0) alarm[2] = 10 * room_speed;
+				if(alarm[2] <= 0) alarm[2] = 3 * room_speed;
 				if(distance_to_object(oPlayer) < 256) 
 				{
 					State = GState.chase;

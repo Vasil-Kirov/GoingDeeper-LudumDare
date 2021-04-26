@@ -15,3 +15,8 @@ if(GameOver)
 	draw_text(((view_width * 3) / 2)- 72 * 3, ((view_height * 3) / 2) - 72, "Game Over");
 }
 draw_set_alpha(1);
+
+if(instance_exists(oBoss))
+{
+	draw_healthbar(x-100, y+50, x+(view_width*2), y + 80, oBoss.hp*1.666666666666666666, c_black, c_red, c_lime, 0, true, true)
+}

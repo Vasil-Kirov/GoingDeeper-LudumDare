@@ -1,9 +1,9 @@
 if(hp <= 0)
 {
 	speed = 0;
+	hit = false;
 	if(State != BossState.dead)
 	{
-		hit = false;
 		State = BossState.dead;
 		sprite_index = sBossDeath;
 		image_index = 0;
@@ -14,6 +14,11 @@ else
 {
 	if(instance_exists(oPlayer))
 	{
+		if(distance_to_object(oPlayer) > 200) move_towards_point(oPlayer.x, oPlayer.y, 4);
+		if(alarm[4] <= 0)
+		{
+			alarm[4] = 7 * room_speed;
+		}
 		if(State != BossState.attack) facing = sign(oPlayer.x - x); // Get facing direction
 		image_xscale = facing;
 
@@ -103,22 +108,23 @@ else
 			}break;
 			case BossState.skill:
 			{
+				if(GoingToX == 0) GoingToX = x;
+				if(GoingToY == 0) GoingToY = oPlayer.y;
 				if(place_meeting(x, y, oWall))
 				{
-					move_towards_point(x, oPlayer.y-35, 3)
+					MovingOutOfWall = true;
+					move_towards_point(x, oPlayer.y-30, 3)
 				}
 				else
 				{
-					if(Finish)
+					if(MovingOutOfWall)
 					{
-						State = BossState.hover;
-						sprite_index  = sBossIdle;
-						image_index   = 0;
-						Finish= false;
-						break;
+						// Stop moving out of the wall
+						speed = 0;
 					}
-					if(distance_to_point(GoingToX, GoingToY) < 20 && sprite_index != sBossSkill)
+					if(distance_to_point(GoingToX, GoingToY) < 20 && !inPosition)
 					{
+						inPosition = true;
 						speed = 0;
 						sprite_index = sBossSkill;
 						image_index = 0;

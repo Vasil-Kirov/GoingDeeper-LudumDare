@@ -7,6 +7,7 @@ enum BossState
 	dead
 }
 
+MovingOutOfWall = false;
 LastAttack = BossState.hover;
 TimesRepeated = 0;
 CanBeHit = true;
@@ -21,8 +22,8 @@ GoingToY = 0;
 
 /* Variables for skill state */ 
 AlreadyStarted = false;
-Finish = false;
 CreateBullet = true;
+inPosition = false;
 
 /* Variables for attack state */ 
 
